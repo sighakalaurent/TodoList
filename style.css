@@ -1,0 +1,28 @@
+#display {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin: auto;
+    padding-left: 5%;
+
+}
+
+#Todolist {
+    border: 1px solid;
+    width: 700px;
+
+}
+
+#rendu p{
+    width: 700px;
+    height: 50px;
+    background-color: blueviolet;
+}
+
+#rendu #chose{
+margin-left: 50px;
+}
+
+#rendu #date{
+margin-left: 50px;
+}
