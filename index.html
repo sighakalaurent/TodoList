@@ -6,22 +6,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <div id="Todolist">
+    <div id="Todolist" style="display: block">
       <div id="display">
-        <p>titre de la tache:<input type="text" id="title" /></p>
-        <p>Description des taches: <input type="text" id="description" /></p>
+        <p>
+          titre de la tache:
+          <textarea name="title" id="title"></textarea>
+
+          <!-- <input type="text" id="title" /> -->
+        </p>
+        <p>
+          Description des taches:
+          <textarea name="description" id="description"></textarea>
+
+          <!-- <input type="text" id="description" /> -->
+        </p>
         <p>Choix du jour: <input type="date" id="jour" /></p>
       </div>
       <button id="valider" type="submit">Valider</button>
+      <button id="Edit" type="submit" style="display: none">Edit</button>
+      <button id="filtrer">filtrer par Date</button>
     </div>
-    <div id="rendu">
-      <p>
-        Titre: <span id="title"></span> chose a faire: <span id="chose"></span>
+    <section class="search">
+      <input type="search"  id="search"  name="produit"  placeholder="Recherchez une tache..."/>
+      <i class="fa fa-search search-icon"> </i>
+    </section>
 
-       date <span id="date"></span>
-      </p>
-    </div>
+    <!-- rendu -->
+
+    <div id="rendu"></div>
+    <div id="todo"></div>
+   
   </body>
 </html>

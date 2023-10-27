@@ -1,3 +1,12 @@
+*body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
 #display {
     display: flex;
     align-items: center;
@@ -7,22 +16,73 @@
 
 }
 
+/* recherche */
+
+.search {
+    width: 100%;
+    /* margin: 51px; */
+    /* margin-left: 259px; */
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    border: groove;
+
+
+}
+
+.search i {
+    margin-left: 20%;
+}
+
+.search input {
+    width: 78%;
+    font-size: 20px;
+    /* margin-right: 215px; */
+    padding: 12px;
+    border-radius: 15px;
+    border: gainsboro;
+    outline: none;
+    /* border-radius: 15px; */
+    /* width: 59%; */
+
+}
+
+#display #title {
+    font-weight: bold;
+}
+
 #Todolist {
+    margin: auto;
     border: 1px solid;
     width: 700px;
 
 }
 
-#rendu p{
-    width: 700px;
-    height: 50px;
-    background-color: blueviolet;
+
+.btn_delete {
+    background-color: rgb(233, 70, 70);
 }
 
-#rendu #chose{
-margin-left: 50px;
+.Edit {
+    background-color: rgb(15, 247, 15);
 }
 
-#rendu #date{
-margin-left: 50px;
+
+
+
+#rendu .gride {
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    width: 98%;
+    padding: 15px;
+    text-align: center;
+    gap: 2%;
+
+    /* justify-content: space-between; */
+}
+
+.gride #one {
+word-break: break-all;
+    
 }
