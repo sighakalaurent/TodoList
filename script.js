@@ -90,17 +90,19 @@ function update(index) {
     update[index].title = document.getElementById("title").value;
     update[index].description = document.getElementById("description").value;
     update[index].jour = document.getElementById("jour").value;
+
     localStorage.setItem("todoList", JSON.stringify(update));
+    affichage(update);
 
     document.getElementById("title").value = "";
     document.getElementById("title").value = "";
     document.getElementById("title").value = "";
 
     document.getElementById("valider").style.display = "block";
-    document.getElementById("Edit").style.display = "none";
     document.getElementById("filtrer").style.display = "block";
+
+    document.getElementById("Edit").style.display = "none";
   };
-  affichage(update);
 }
 
 // Filtrer une tache
@@ -128,15 +130,12 @@ function seachTask() {
     console.log(tache);
     let recherche = listTask.filter((t) => t.title.includes(tache));
 
-
-    
-  affichage(recherche);
+    affichage(recherche);
   });
-
 }
- seachTask();
+seachTask();
 
- function addData(setUserEntre) {
+function addData(setUserEntre) {
   let getUserEntre = getItem();
   console.log(getItem());
   getUserEntre.push(setUserEntre);
