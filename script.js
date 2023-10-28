@@ -70,6 +70,7 @@ function deleteData(index) {
   let remove = tabletache.splice(index, 1);
   console.log(tabletache);
   localStorage.setItem("todolist", JSON.stringify(tabletache));
+  document.location.reload();
   affichage(tabletache);
 }
 // Modifier les inputs entre par l'utilisateur
@@ -95,8 +96,8 @@ function update(index) {
     affichage(update);
 
     document.getElementById("title").value = "";
-    document.getElementById("title").value = "";
-    document.getElementById("title").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("jour").value = "";
 
     document.getElementById("valider").style.display = "block";
     document.getElementById("filtrer").style.display = "block";
@@ -139,6 +140,7 @@ function addData(setUserEntre) {
   let getUserEntre = getItem();
   console.log(getItem());
   getUserEntre.push(setUserEntre);
+  // document.location.reload();
   localStorage.setItem("todolist", JSON.stringify(getUserEntre));
 }
 
@@ -150,7 +152,6 @@ function setList() {
   let informations = getItem();
   console.log(informations);
   affichage(informations);
-  // document.location.reload();
 }
 
 setList();
