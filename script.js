@@ -103,7 +103,6 @@ function update(index) {
     document.getElementById("filtrer").style.display = "block";
 
     document.getElementById("Edit").style.display = "none";
-    document.location.reload();
 
   };
 }
