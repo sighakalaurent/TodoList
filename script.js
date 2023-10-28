@@ -103,6 +103,8 @@ function update(index) {
     document.getElementById("filtrer").style.display = "block";
 
     document.getElementById("Edit").style.display = "none";
+    document.location.reload();
+
   };
 }
 
@@ -114,6 +116,7 @@ function filtrerdate() {
     const date = jour.value;
     console.log(date);
     let filtre = listeta.filter((j) => j.jour == date);
+
     affichage(filtre);
   });
 }
@@ -142,6 +145,8 @@ function addData(setUserEntre) {
   getUserEntre.push(setUserEntre);
   // document.location.reload();
   localStorage.setItem("todolist", JSON.stringify(getUserEntre));
+  document.location.reload();
+
 }
 
 // recuperer et afficher la liste des todo qui sont dans le local storage.
